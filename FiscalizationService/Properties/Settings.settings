@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MarkoEsc.FiscalizationService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IssuerTIN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12345678</Value>
+    </Setting>
+    <Setting Name="BusinUnitCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xx123xx123</Value>
+    </Setting>
+    <Setting Name="SoftCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ss123ss123</Value>
+    </Setting>
+    <Setting Name="MaintainerCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mm123mm123</Value>
+    </Setting>
+    <Setting Name="OperatorCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">oo123oo123</Value>
+    </Setting>
+    <Setting Name="TCRCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FiscalizationService" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://efitest.tax.gov.me/fs-v1</Value>
+    </Setting>
+    <Setting Name="TCRIntId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

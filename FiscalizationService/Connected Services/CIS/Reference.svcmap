@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9b3ba8b-6e55-49df-b3a8-bd88a1e5d448" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://efitest.tax.gov.me/fs-v1/FiscalizationService.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="f9d31e42-3d82-423d-bc9b-52edbeb97670" SourceId="1" SourceUrl="https://efitest.tax.gov.me/fs-v1/xmldsig-core-schema.xsd" />
+    <MetadataFile FileName="FiscalizationService.wsdl" MetadataType="Wsdl" ID="679fb886-170a-49e8-baed-9ca0aeb3684f" SourceId="1" SourceUrl="https://efitest.tax.gov.me/fs-v1/FiscalizationService.wsdl" />
+    <MetadataFile FileName="eficg-fiscalization-service.xsd" MetadataType="Schema" ID="394bd525-8e46-46d5-8cfd-46b6b711668f" SourceId="1" SourceUrl="https://efitest.tax.gov.me/fs-v1/eficg-fiscalization-service.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

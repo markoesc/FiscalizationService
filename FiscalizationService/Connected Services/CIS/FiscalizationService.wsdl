@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mes="https://efi.tax.gov.me/fs/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:me="https://efi.tax.gov.me/fs" name="FiscalizationService" targetNamespace="https://efi.tax.gov.me/fs" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="eficg-fiscalization-service.xsd" namespace="https://efi.tax.gov.me/fs/schema" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterInvoiceRequest">
+    <wsdl:documentation>Element representing register sale message.</wsdl:documentation>
+    <wsdl:part name="request" element="mes:RegisterInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="RegisterInvoiceResponse">
+    <wsdl:documentation>Element representing register invoice response message.</wsdl:documentation>
+    <wsdl:part name="response" element="mes:RegisterInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterTCRRequest">
+    <wsdl:documentation>Element representing request of the TCR registration message.</wsdl:documentation>
+    <wsdl:part name="request" element="mes:RegisterTCRRequest" />
+  </wsdl:message>
+  <wsdl:message name="RegisterTCRResponse">
+    <wsdl:documentation>Element representing response of the TCR registration message.</wsdl:documentation>
+    <wsdl:part name="response" element="mes:RegisterTCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterCashDepositRequest">
+    <wsdl:documentation>Element representing request of the cash deposit request message.</wsdl:documentation>
+    <wsdl:part name="request" element="mes:RegisterCashDepositRequest" />
+  </wsdl:message>
+  <wsdl:message name="RegisterCashDepositResponse">
+    <wsdl:documentation>Element representing response of the cash deposit response message.</wsdl:documentation>
+    <wsdl:part name="response" element="mes:RegisterCashDepositResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FiscalizationServicePortType">
+    <wsdl:operation name="registerInvoice">
+      <wsdl:input message="me:RegisterInvoiceRequest" />
+      <wsdl:output message="me:RegisterInvoiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registerTCR">
+      <wsdl:input message="me:RegisterTCRRequest" />
+      <wsdl:output message="me:RegisterTCRResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registerCashDeposit">
+      <wsdl:input message="me:RegisterCashDepositRequest" />
+      <wsdl:output message="me:RegisterCashDepositResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FiscalizationServiceSoap" type="me:FiscalizationServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registerInvoice">
+      <soap:operation soapAction="https://efi.tax.gov.me/fs/RegisterInvoice" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerTCR">
+      <soap:operation soapAction="https://efi.tax.gov.me/fs/RegisterTCR" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerCashDeposit">
+      <soap:operation soapAction="https://efi.tax.gov.me/fs/RegisterCashDeposit" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FiscalizationService">
+    <wsdl:port name="FiscalizationServicePort" binding="me:FiscalizationServiceSoap">
+      <soap:address location="https://efitest.tax.gov.me:443/fs-v1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
