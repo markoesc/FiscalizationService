@@ -32,7 +32,7 @@ namespace MarkoEsc.FiscalizationService
 
             Certificate = new X509Certificate2("CoreitPecatSoft.pfx", "123456", X509KeyStorageFlags.Exportable);
 
-            Client = new CIS.FiscalizationServicePortTypeClient();
+            Client = new CIS.FiscalizationServicePortTypeClient(new BasicHttpsBinding(BasicHttpsSecurityMode.Transport), new EndpointAddress(Properties.Settings.Default.FiscalizationService));
 
             Path = Directory.CreateDirectory("Logs").FullName;
         }
@@ -49,6 +49,8 @@ namespace MarkoEsc.FiscalizationService
         private void saveConfiguration_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
+
+            Client = new CIS.FiscalizationServicePortTypeClient(new BasicHttpsBinding(BasicHttpsSecurityMode.Transport), new EndpointAddress(Properties.Settings.Default.FiscalizationService));
         }
 
         private void registerTCR_Click(object sender, EventArgs e)
