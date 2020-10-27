@@ -375,9 +375,9 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(133, 171);
+            this.textBox3.Location = new System.Drawing.Point(103, 171);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 20);
+            this.textBox3.Size = new System.Drawing.Size(260, 20);
             this.textBox3.TabIndex = 3;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
